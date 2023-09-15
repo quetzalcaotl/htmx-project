@@ -1,0 +1,34 @@
+{
+  "samplepost": {
+    "postid": "samplepost",
+    "userid": "sampleuser",
+    "text": "Hello world! Again!",
+    "postdate": "1694754651286",
+    "likecount": 14,
+    "likes": {
+      "sampleuser": true
+    },
+    "replycount": 4,
+    "replies": {},
+    "favoritecount": 2,
+    "favorites": {
+      "sampleuser": true
+    }
+  },
+  "samplepost2": {
+    "postid": "samplepost2",
+    "userid": "sampleuser",
+    "text": "Hello world!",
+    "postdate": "1663215222000",
+    "likecount": 10044,
+    "likes": {
+      "sampleuser": true
+    },
+    "replycount": 145,
+    "replies": {},
+    "favoritecount": 549,
+    "favorites": {
+      "sampleuser": true
+    }
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                margin: 0;
+                border: 0;
+                padding: 0;
+                font-family: San Francisco, Arial, sans-serif;
+                box-sizing: border-box;
+                color: #3C4043;
+            }
+            body {
+                background-color: #F2F3F4;;
+            }
+            nav {
+                width: 100%;
+                position: sticky;
+                background-color: white;
+                padding: 12px 24px;
+                display: flex;
+                box-shadow: 1px 1px 2px #3C4043;
+            }
+            main {
+                margin: auto;
+                padding: 48px 64px;
+                width: 100%;
+                max-width: 720px;
+                background-color: white;
+            }
+            .post-list {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+            .post {
+                background-color: #F8F9FA;
+                box-shadow: 1px 1px 2px #3C4043;
+                padding: 24px 18px;
+                border-radius: 4px;
+                display: grid;
+                grid-template-areas:
+                "sidebar post-header post-header post-header "
+                "sidebar text text text"
+                ". post-meta post-meta post-meta";
+                grid-template-columns: [sidebar] 75px auto;
+            }
+            .post-profilepicture {
+                grid-area: sidebar;
+                justify-self: center;
+                align-self: start;
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+                box-shadow: 1px 1px 2px #3C4043;
+            }
+            .post-header {
+                grid-area: post-header;
+            }
+            .post-username {
+                font-weight: 600;
+            }
+            .post-username,
+            .post-userhandle,
+            .post-postdate {
+                display: inline;
+            }
+            .post-text {
+                grid-area: text;
+            }
+            .post-meta {
+                grid-area: post-meta;
+            }
+            .post-likes,
+            .post-favorites,
+            .post-replies {
+                cursor: pointer;
+                display: inline;
+            }
+        </style>
+        <script src="https://unpkg.com/htmx.org@1.9.5"></script>
+    </head>
+    <body>
+        <nav>navbar</nav>
+        <main>
+            <div class="post-list" hx-swap="innerHtml" hx-get="/posts" hx-trigger="load"></div>
+            </div>
+        </main>
+    </body>
+</html>

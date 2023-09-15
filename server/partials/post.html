@@ -1,0 +1,20 @@
+<div class="post">
+  <img class="post-profilepicture" src="{profilepicture}"></img>
+  <div class="post-header">
+    <div class="post-username">{username}</div>
+    <div class="post-userhandle">{userhandle}</div>
+    <div class="post-postdate">{postdate}</div>
+  </div>
+  <div class="post-text">{text}</div>
+  <div class="post-meta">
+    <div class="post-likes" hx-post="/like/{postid}" hx-target="find .likecount" hx-swap="innerHtml">
+      ♡ <span class="likecount">{likecount}</span>
+    </div>
+    <div class="post-favorites" hx-post="/favorite/{postid}" hx-target="find .favoritecount" hx-swap="innerHtml">
+      ☆ <span class="favoritecount">{favoritecount}</span>
+    </div>
+    <div class="post-replies" hx-post="/reply/{postid}" hx-target="find .replycount" hx-swap="innerHtml">
+      ⏎ <span class="replycount">{replycount}</span>
+    </div>
+  </div>
+</div>
